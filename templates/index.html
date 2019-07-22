@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  
+    <div class="posts">
+        {% if posts %}
+            {% for post in posts %}
+                <div class="post">
+                    <p class="title"><a href="/post/{{post.key()}}">{{post.val().title}}</a></p>
+                    <p class="author">by {{post.val().author}}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="noposts">
+                
+                <img src="../static/assets/2404627.svg" />
+                <p>What? No posts?, Why don't you try adding your own.</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

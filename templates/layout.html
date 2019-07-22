@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+
+<body>
+ 
+ <!-- include the nav -->
+ {% include "includes/_nav.html" %}
+
+
+ <header>
+  <div>  
+    <h1>Flask <br/> Demo</h1>
+    <p>Powered by Python &amp; Firebase</p>
+
+  </div>  
+  <img src="../static/assets/2498169.svg"/>
+ 
+</header>
+
+ <main>
+    {% block content %}
+    {% endblock %}     
+ </main>
+</body>
+</html>

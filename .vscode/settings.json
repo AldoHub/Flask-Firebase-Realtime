@@ -1,0 +1,6 @@
+{
+    "python.linting.pylintEnabled": false,
+    "python.linting.banditEnabled": true,
+    "python.linting.enabled": false,
+    "python.pythonPath": "C:\\Users\\aldocaava\\.virtualenvs\\FlaskDemo-lsPujwp8\\Scripts\\python.exe"
+}

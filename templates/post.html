@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+   
+    {% for p in data %}
+        <div class="single">
+            <p class="title">{{p.val().title}}</p>
+            <p>{{p.val().author}}</p>
+
+            <div>{{p.val().content}}</div>
+            
+            {% if session["usr"] %}
+                {% if session["email"] == p.val().author %}
+                <a href="/edit/{{p.key()}}">Edit Post</a>
+                {% endif %}
+            {% endif %}
+
+        </div>
+   {% endfor %}
+
+ 
+
+{% endblock %}

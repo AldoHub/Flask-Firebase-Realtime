@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  
+   
+    <form method="POST" action="/create">
+        <h2>Create a new post</h2>
+        <div class="form-control">
+            <label for="title">Post title:</label>
+            <input type="text" name="title" placeholder="post title">
+        </div>
+        <div class="form-control">
+            <label for="content">Post content:</label>
+            <textarea name="content" placeholder="post body content"></textarea>    
+        </div>
+        <input type="submit" value="Create">
+    </form>
+
+
+{% endblock %}

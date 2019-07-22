@@ -1,0 +1,23 @@
+<nav>
+    <ul>
+        <li><a href="/">FlaskDemo</a></li>
+    </ul>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/create">Create Post</a></li>
+        {% if not session["usr"] %}
+        <li><a href="/signup">SignUp</a></li>
+        <li><a href="/login">Login</a></li>
+        {% endif %}
+
+        {% if session["usr"] %}
+        <li><a href="/logout"> Logout</a></li>
+        {% endif %}
+       
+        {% if session["email"] %}
+        <li>{{session["email"]}} </li>
+        {% endif %}
+
+    </ul>
+   
+</nav>

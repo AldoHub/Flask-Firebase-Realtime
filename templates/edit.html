@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+   
+    {% for p in data %}
+    <form method="POST" action="/edit/{{p.key()}}">
+        <h2>Edit Post</h2>
+        <div class="form-control">
+            <label for="title">Post title:</label>
+            <input type="text" name="title" value="{{p.val().title}}">
+        </div>
+        <div class="form-control">
+            <label for="content">Post content:</label>
+            <textarea name="content">{{p.val().content}}</textarea>    
+        </div>
+        {% if session["usr"] %}
+            {% if session["email"] == p.val().author %}
+                <input type="submit" value="Update">
+            {% endif %}
+        {% endif %}
+       
+    </form>
+    {% if session["usr"] %}
+        {% if session["email"] == p.val().author %}
+            <form method="POST" action="/delete/{{p.key()}}">
+                <input class="delete" value="Delete" type="submit" >
+            </form>
+        {% endif %}
+    {% endif %} 
+   
+    
+    {% endfor %}
+
+
+
+{% endblock %}
