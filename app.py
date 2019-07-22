@@ -7,13 +7,7 @@ import pyrebase
 
 #firebase config
 config = {
-    "apiKey": "AIzaSyALPmMT6SsYCRvy5vUBnFHJTBCnw37yFq0",
-    "authDomain": "angularfirebasetut-3534c.firebaseapp.com",
-    "databaseURL": "https://angularfirebasetut-3534c.firebaseio.com",
-    "projectId": "angularfirebasetut-3534c",
-    "storageBucket": "angularfirebasetut-3534c.appspot.com",
-    "messagingSenderId": "824867948866",
-    "appId": "1:824867948866:web:8556add977bc6c1b"
+  
 }
 
 #init firebase
